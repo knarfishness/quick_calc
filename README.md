@@ -5,7 +5,7 @@ quick_calc_app
 
 A Symfony project created on July 10, 2015, 6:46 pm.
 
-This quick app was written by favery for Quicken Loans HR. It includes Symfony framework, jQuery and Twitter Bootstrap assets.
+This quick app was written by favery. It includes Symfony framework, jQuery and Twitter Bootstrap assets.
 
 The following files in the symfony app were customized:
 
