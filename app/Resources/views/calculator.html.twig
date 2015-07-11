@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+
+<div id="container">
+
+    <div class="menu">
+        <span>Frank Avery 2015</span>
+    </div>
+
+    <div class="bubble">
+        <div class="rectangle"><h2>SymfonyCalc</h2></div>
+        <div class="triangle-l"></div>
+        <div class="triangle-r"></div>
+        <div class="info">
+            <form method="post">
+                <div align="center">
+                    <span id="errors">
+                        {% for error in errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </span>
+                    <br />
+
+                    <input autocomplete="off" autofocus="autofocus" type="text" id="n1" name="n1" class="form-control" placeholder="First Value">
+                    <br />
+
+                    <div id="operator_buttons" class="btn-group" data-toggle="buttons" data-toggle-name="hidden_ipt">
+                        <label class="btn btn-default">
+                            <input type="radio" name="operator" value="+" />
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="operator" value="-" />
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="operator" value="*" />
+                            <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="operator" value="/" />
+                            <b>&nbsp;/&nbsp;</b>
+                        </label>
+                    </div>
+                    <select style="display:none" name="op" id="hidden_ipt">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <br /><br />
+
+                    <input autocomplete="off" type="text" id="n2" name="n2" class="form-control" placeholder="Second Value">
+                    <br />
+
+                    <input type="submit" class="bigsubmit" name="submit" value="                =                ">
+                    <br /><br />
+
+                    <span class="calcresult">{{ result }}</span>
+                    <br /><br />
+
+                    <button id="clear" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clear</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
