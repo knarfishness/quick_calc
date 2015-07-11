@@ -17,3 +17,5 @@ The following files in the symfony app were customized:
 Once the project has been imported, it can be accessed at the following URL:
 
 http://127.0.0.1:8000/app_dev.php/calculator
+
+![Screenshot](http://i.imgur.com/5x9VJT8.png "Interface")
